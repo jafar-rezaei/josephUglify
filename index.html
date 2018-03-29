@@ -1,0 +1,42 @@
+<script type="text/javascript" src="1.js"></script>
+<div>
+  <div>
+    <label for='input' style='display:block'>js:</label>
+    <textarea id='input' style='width:540px;height:300px;margin:20px'></textarea>
+  </div>
+  <button id='run' type='button'>minify</button>
+</div>
+
+<script type="text/javascript">
+	console.log(document.getElementById('run'));
+	document.getElementById('run').addEventListener("click" , function(){
+		var options = {
+		    parse: {
+		        // parse options
+		    },
+		    compress: {
+		        // compress options
+		    },
+		    mangle: {
+		        // mangle options
+
+		        properties: {
+		            // mangle property options
+		        }
+		    },
+		    output: {
+		        // output options
+		    },
+		    sourceMap: {
+		        // source map options
+		    },
+		    nameCache: null, // or specify a name cache object
+		    toplevel: false,
+		    ie8: false,
+		    warnings: false,
+		};
+		var mainValue = document.getElementById('input').value;
+
+		var min = josephUglify(mainValue , options);
+	});
+</script>
