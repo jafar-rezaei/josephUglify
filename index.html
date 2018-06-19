@@ -1,4 +1,11 @@
-<script type="text/javascript" src="uglify.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>کم حجم کننده js</title>
+	<script type="text/javascript" src="uglify.js"></script>
+</head>
+<body>
+
 <div>
   <div>
     <label for='input' style='display:block'>js:</label>
@@ -38,5 +45,10 @@
 		var mainValue = document.getElementById('input').value;
 
 		var min = josephUglify(mainValue , options);
+		
+		console.log(min);
 	});
 </script>
+
+</body>
+</html>
